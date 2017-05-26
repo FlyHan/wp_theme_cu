@@ -16,10 +16,10 @@ Template Name: Home逼格页
 <div class="willerce">
   <img class="avatar" src="<?php bloginfo( 'template_url' ); ?>/images/avatar.png" alt="" width="128" height="128">
   <h1><?php bloginfo('name'); ?></h1>
-  <p>Work @ Shanghai Pharmaceutical Group, Network programming team leader. More <a href="/about">About Me</a> </p>
+  <p>Work @ ShenZhen NiuTu Tech <br/> Linux Driver Development Engineer<br/> More <a href="/about">About Me</a> </p>
   <p style="height: 24px; line-height: 24px; margin: 15px 0;">
     <img style="vertical-align: bottom; margin-right: 10px;" src="<?php bloginfo( 'template_url' ); ?>/images/address.png">
-    ShangHai · China
+    ShenZhen · China
   </p>
   <p class="nav">
 	<?php   
