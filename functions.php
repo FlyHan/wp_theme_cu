@@ -64,3 +64,27 @@ function replace_avatar_url($avatar) {
     return $avatar;
 }
 add_filter( 'get_avatar', 'replace_avatar_url', 10, 3 );
+/******************************add by FlyHan**********************************/
+//自动生成版权时间
+function comicpress_copyright() {
+    global $wpdb;
+    $copyright_dates = $wpdb->get_results("
+    SELECT
+    YEAR(min(post_date_gmt)) AS firstdate,
+    YEAR(max(post_date_gmt)) AS lastdate
+    FROM
+    $wpdb->posts
+    WHERE
+    post_status = 'publish'
+    ");
+    $output = '';
+    if($copyright_dates) {
+    $copyright = "&copy; " . $copyright_dates[0]->firstdate;
+    if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
+    $copyright .= '-' . $copyright_dates[0]->lastdate;
+    }
+    $output = $copyright;
+    }
+    return $output;
+    }
+/******************************add by FlyHan**********************************/
