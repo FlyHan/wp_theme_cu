@@ -65,12 +65,6 @@ add_action( 'admin_init', 'remove_dashboard_meta' );
 function custom_login_logo() { echo '<link rel="stylesheet" id="wp-admin-css" href="'.get_bloginfo('template_directory').'/css/admstyle.css" type="text/css" />';}
 add_action('login_head', 'custom_login_logo');
 
-//自定义后台版权
-function remove_footer_admin () {
-echo '感谢使用 <a href="http://www.2zzt.com" target="_blank">爱找主题</a> 所设计的WordPress主题！香港主题推荐：<a href="http://www.2zzt.com/go/hcyun" target="_blank">恒创云主机</a>   <a href="http://www.2zzt.com/go/3locban" target="_blank">三号主机</a></p>';
-}
-add_filter('admin_footer_text', 'remove_footer_admin');
-
 //custom admin logo
 function custom_logo() {
   echo '<style type="text/css">
