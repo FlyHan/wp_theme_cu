@@ -9,4 +9,7 @@
 		</div>
 	<?php endwhile; ?>
 </article>
+<section class="comments">
+	<?php if (comments_open()) comments_template(); ?>
+</section>
 <?php get_footer(); ?>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' );?>" />
+<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo( 'charset' );?>" />
+<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" type="text/css">
